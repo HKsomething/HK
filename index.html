@@ -176,39 +176,47 @@
             </div>
             <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
                 <input type="hidden" name="access_key" value="c6e3ce50-36df-43ab-a9a4-972c08d29a50">
+                
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-semibold mb-2">Full Name</label>
-                        <input type="text" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="John Smith">
+                        <!-- Added name="name" -->
+                        <input type="text" name="name" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="John Smith">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold mb-2">Company Name</label>
-                        <input type="text" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="ABC Logistics">
+                        <!-- Added name="company" -->
+                        <input type="text" name="company" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="ABC Logistics">
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-semibold mb-2">Email Address</label>
-                        <input type="email" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="john@example.com">
+                        <!-- Added name="email" -->
+                        <input type="email" name="email" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="john@example.com">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold mb-2">Phone Number</label>
-                        <input type="tel" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="0400 000 000">
+                        <!-- Added name="phone" -->
+                        <input type="tel" name="phone" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="0400 000 000">
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-semibold mb-2">Pickup Suburb / Postcode</label>
-                        <input type="text" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="e.g. Malaga WA 6090">
+                        <!-- Added name="pickup" -->
+                        <input type="text" name="pickup" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="e.g. Malaga WA 6090">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold mb-2">Delivery Suburb / Postcode</label>
-                        <input type="text" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="e.g. Kalgoorlie WA 6430">
+                        <!-- Added name="delivery" -->
+                        <input type="text" name="delivery" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="e.g. Kalgoorlie WA 6430">
                     </div>
                 </div>
                 <div>
                     <label class="block text-sm font-semibold mb-2">Cargo Details & Requirements</label>
-                    <textarea rows="4" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Please specify weight, dimensions, pallet count, or special handling needs..."></textarea>
+                    <!-- Added name="message" -->
+                    <textarea rows="4" name="message" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Please specify weight, dimensions, pallet count, or special handling needs..."></textarea>
                 </div>
                 <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-4 rounded-lg transition shadow-md text-lg">Submit Quote Request</button>
             </form>
